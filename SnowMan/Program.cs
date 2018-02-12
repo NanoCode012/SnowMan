@@ -15,11 +15,9 @@ namespace SnowMan
                 Console.Write("Please choose direction to turn to! Option(WASD) : ");
                 string input = Console.ReadLine().ToUpper();
                 if (!String.IsNullOrEmpty(input)) ply.Move(input[0]);
-				//AStarSearch astr = new AStarSearch(new Node(enmy.GetPosition()[0], enmy.GetPosition()[1]), new Node(ply.GetPosition()[0],ply.GetPosition()[1]), lvl);
                 enmy.Move();
                 Console.Clear();
                 Console.WriteLine("GAME ON!");
-                //astr.Overwrite();
 				lvl.PrintBoard();
             }
             if (lvl.GetWinState()) Console.WriteLine("YOU WON!");

@@ -37,14 +37,11 @@ namespace SnowMan
         }
 
         /// <summary>
-        /// Unimplemented! Does Not Return HashCode!
+        /// Return ID
         /// </summary>
-        /// <remarks>
-        /// I have to implement this because Node implements IEqualityComparer, and I need Equals to use in Heap
-        /// </remarks>
         public int GetHashCode(Node n)
         {
-            throw new NotImplementedException("Unimplemented because I don't know what's HashCode, nor will I use it");
+            return this.ID;
         }
 
         public bool Equals(Node n)

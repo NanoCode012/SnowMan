@@ -49,10 +49,13 @@ namespace SnowMan
         public void SetBoard()
         {
             FillBorder();
+
+            //Fixed Obstacle. Will change when use level
             FillWall(4, 7);
             FillWall(5, 5);
             FillWall(5, 6);
             FillWall(5, 7);
+
             FillGoal();
         }
 

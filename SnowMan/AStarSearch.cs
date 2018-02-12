@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Heap;
 
 namespace SnowMan
 {
@@ -108,7 +107,7 @@ namespace SnowMan
             tempNode.CostDistFromStartNode = distTravelled;
 
             //Check in heap if tempNode exists
-            /*
+
             if (openList.CheckIfExists(tempNode))
             {
                 //Replace if tempNode's totalDist is smaller
@@ -118,8 +117,8 @@ namespace SnowMan
             {
 				openList.Push(tempNode);
             }
-            */
-            openList.Push(tempNode);
+
+            //openList.Push(tempNode);
         }
 
         private void AddIntoClosedList(Node tempNode)
@@ -128,10 +127,10 @@ namespace SnowMan
             if (!closedList.ContainsKey(tempNode.ID))
             {
 				closedList.Add(tempNode.ID, tempNode);
-            }else
+            }
+
+            else
             {
-                //Unnecessary workload, exception happens when removed because a Node can be in openedList many times, but can only be in ClosedList due to Dictionary,
-                //will be fixed when finished changing the data structure of the openList
                 Node alreadyExistingNode;
                 if (closedList.TryGetValue(tempNode.ID, out alreadyExistingNode))
                 {
@@ -142,7 +141,7 @@ namespace SnowMan
                     }
                 }
             }
-            */
+			*/
             closedList.Add(tempNode.ID, tempNode);
         }
 
